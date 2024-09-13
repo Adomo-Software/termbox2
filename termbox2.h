@@ -1555,7 +1555,7 @@ static int bytebuf_reserve(struct bytebuf_t *b, size_t sz);
 static int bytebuf_free(struct bytebuf_t *b);
 
 int tb_init(void) {
-    return tb_init_file("/dev/tty");
+    return tb_init_fd(STDOUT_FILENO);
 }
 
 int tb_init_file(const char *path) {
